@@ -346,6 +346,7 @@
   padding: 8px 12px;
   cursor: pointer;
   white-space: nowrap;
+  font-weight: 700;
 }
 
 .pill-btn.active {
@@ -579,5 +580,18 @@
   }
   .fab {
     display: inline-flex;
+  }
+}
+
+@media print {
+  .app-header,
+  .board,
+  .panels-row,
+  .start-screen {
+    display: none !important;
+  }
+  .app-shell {
+    padding: 0 !important;
+    background: white;
   }
 }

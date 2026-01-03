@@ -269,11 +269,13 @@
 
 /* Receipt Styles */
 .receipt {
-  width: 72mm;
+  width: 70mm;
   background: white;
   padding: 0;
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  page-break-inside: avoid;
 }
 
 .receipt-kot {
@@ -490,6 +492,11 @@
 
 /* Print Media Query */
 @media print {
+  @page {
+    size: 72mm auto;
+    margin: 0;
+  }
+
   .print-page-container {
     background: white;
   }
